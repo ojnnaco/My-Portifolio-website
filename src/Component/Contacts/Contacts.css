@@ -1,0 +1,84 @@
+.c {
+  height: 100vh;
+  position: relative;
+}
+
+.c-bbg {
+  height: 100%;
+  width: 25px;
+  background-color: darkslategray;
+  position: absolute;
+}
+
+.c-wrapper {
+  display: flex;
+  padding: 50px;
+}
+
+.c-left {
+  flex: 1;
+}
+.c-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.c-title {
+  font-size: 40px;
+  width: 100%;
+}
+
+.c-info-item {
+  display: flex;
+  align-items: center;
+  margin: 50px 0px;
+  font-weight: 500;
+}
+
+.i-icon {
+  width: 50px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.right-desc {
+  font-weight: 300;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+input {
+  width: 50%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 10px 0px;
+  font-size: 17px;
+  padding-left: 5px;
+}
+
+textarea {
+  width: 100%;
+  margin: 10px 0px;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.submit {
+  border: 1px solid black;
+  padding: 15px;
+  background-color: whitesmoke;
+  font-weight: bold;
+  border-radius: 7px;
+  width: 10em;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: darkslategrey;
+  color: white;
+}

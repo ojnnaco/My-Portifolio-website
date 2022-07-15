@@ -1,0 +1,41 @@
+.Pfolio {
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p-text {
+  font-size: 2rem;
+  font-weight: 400;
+  color: black;
+}
+.p-folio {
+  font-size: 2rem;
+  font-weight: 300;
+  color: black;
+}
+
+/* slider  */
+.Pfolio .swiper {
+  overflow: visible;
+}
+
+.Pfolio_slider {
+  margin-top: 3rem;
+  width: 92%;
+}
+
+.Pfolio_slider .swiper-slide {
+  width: 15rem;
+}
+
+.Pfolio img {
+  width: 12rem;
+  cursor: pointer;
+}
+
+/* .Pfolio_slider .swiper-slide:hover {
+  background-color: darkslategray;
+} */
