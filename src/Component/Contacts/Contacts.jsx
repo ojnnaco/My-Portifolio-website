@@ -5,10 +5,12 @@ import Address from '../../images/Address.png';
 import Phone from '../../images/Phone.png';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 
 function Contacts() {
     const formRef = useRef()
+    const [done, setDone] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -21,6 +23,7 @@ function Contacts() {
         )
         .then((result) => {
             console.log(result.text);
+            setDone(true)
         }, (error) => {
             console.log(error.text);
         });
@@ -56,6 +59,7 @@ function Contacts() {
                         <input type="text" placeholder='Email' name='user_email' />
                         <textarea rows='6' placeholder='Drop a Message' name='Message'/>
                         <button className='submit'>Submit</button>
+                        {done && '...Message Sent, Thank you'}
                     </form>
                 </div>
             </div>
