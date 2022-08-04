@@ -74,11 +74,12 @@ textarea {
   padding: 15px;
   background-color: whitesmoke;
   font-weight: bold;
-  border-radius: 7px;
+  font-size: 15px;
+  border-radius: 4px;
   width: 10em;
-  cursor: pointer;
 }
 .submit:hover {
-  background-color: darkslategrey;
+  background-color: skyblue;
   color: white;
+  cursor: pointer;
 }

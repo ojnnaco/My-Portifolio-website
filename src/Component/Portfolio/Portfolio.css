@@ -1,0 +1,38 @@
+.P {
+  padding: 0 5rem 0 5rem;
+  display: flex;
+  height: 80vh;
+  margin-bottom: 5rem;
+  margin-top: 9rem;
+  /* margin-bottom: 13rem; */
+}
+
+.P-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.P-left > :nth-child(1) {
+  font-size: 80px;
+  font-weight: bold;
+  color: black;
+}
+
+.P-left > :nth-child(2) {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+.P-left > :nth-child(3) {
+  font-size: 15px;
+  margin-top: 1rem;
+}
+
+.P-right {
+  position: relative;
+}
+
+.P-right > * {
+  position: absolute;
+}

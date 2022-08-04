@@ -36,6 +36,10 @@
   cursor: pointer;
 }
 
+.Swiper-slide {
+  flex-direction: column;
+}
+
 /* .Pfolio_slider .swiper-slide:hover {
   background-color: darkslategray;
 } */

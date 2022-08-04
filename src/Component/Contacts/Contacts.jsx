@@ -3,7 +3,7 @@ import './Contacts.css'
 import Email from '../../images/Email.png';
 import Address from '../../images/Address.png';
 import Phone from '../../images/Phone.png';
-import { useRef } from 'react';
+import { useRef } from 'react'; //useRef Hooks was used to collect the inputs
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 
@@ -13,17 +13,17 @@ function Contacts() {
     const [done, setDone] = useState(false)
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault() //this function prevents the submit button from refreshing the page when clicked 
         emailjs
         .sendForm
-        ('service_kk1vgkq', 
-        'template_koj3soi', 
+        ('service_kk1vgkq',  //service id from emailjs
+        'template_koj3soi', //email template id from emailjs
         formRef.current, 
-        '-Rtatr8J-MR3fLbYW'
+        '-Rtatr8J-MR3fLbYW' //Public key from Account in emailjs
         )
         .then((result) => {
             console.log(result.text);
-            setDone(true)
+            setDone(true) //after a successful mail, we are gonna set this to true
         }, (error) => {
             console.log(error.text);
         });
@@ -59,7 +59,10 @@ function Contacts() {
                         <input type="text" placeholder='Email' name='user_email' />
                         <textarea rows='6' placeholder='Drop a Message' name='Message'/>
                         <button className='submit'>Submit</button>
-                        {done && '...Message Sent, Thank you'}
+                        <div className='form-text'>
+                            {/* if done is true,then display the thank you message below  */}
+                        {done && 'Message Sent, Thank you.'}
+                        </div>
                     </form>
                 </div>
             </div>
